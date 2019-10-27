@@ -1,0 +1,73 @@
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdftex 2019.10.6)  6 OCT 2019 19:40
+entering extended mode
+**C:/Users/Morgan/Documents/Academic*Work/Aberystwyth*University/Year*5/AI/Repo
+rt*Assignment/my_latex_template/sample-bibliography.bib
+
+("C:/Users/Morgan/Documents/Academic Work/Aberystwyth University/Year 5/AI/Repo
+rt Assignment/my_latex_template/sample-bibliography.bib"
+Underfull \vbox (badness 1215) has occurred while \output is active
+\vbox(643.20255+1.94444)x469.75499, glue set 2.30064
+.\glue(\topskip) 3.05556
+.\hbox(6.94444+1.94444)x469.75499, glue set 0.78917
+..\hbox(0.0+0.0)x20.0
+..\tenrm @
+..\tenrm S
+..\tenrm t
+..\tenrm r
+..etc.
+.\penalty 150
+.\glue(\baselineskip) 3.11111
+.\hbox(6.94444+1.94444)x469.75499, glue set 0.28447
+..\tenrm M
+..\tenrm a
+..\tenrm t
+..\tenrm h
+..\tenrm .
+..etc.
+.etc.
+
+ [1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
+Overfull \hbox (58.55194pt too wide) in paragraph at lines 231--244
+\tenrm year = "2007", pages = "36--44", doi = "10.1145/1188913.1188915", url = 
+"http://doi.acm.org/10.1145/1219092.1219093",|
+
+\hbox(7.5+2.5)x469.75499, glue set - 1.0
+.\tenrm y
+.\kern-0.27779
+.\tenrm e
+.\tenrm a
+.\tenrm r
+.etc.
+
+[2]
+Overfull \hbox (9.52386pt too wide) in paragraph at lines 329--349
+\tenrm pub-lisher = "Uni-ver-sity of Chicago Press", doi = "10.1007/3-540-09237
+-4", url = "http://dx.doi.org/10.1007/3-|
+
+\hbox(7.5+2.5)x469.75499, glue set - 1.0
+.\tenrm p
+.\tenrm u
+.\tenrm b
+.\discretionary
+..\tenrm -
+.\tenrm l
+.etc.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   _
+l.387   doi = 	 "10.1007/3-540-65193-4_
+                                       29",
+? 
+! Emergency stop.
+<inserted text> 
+                $
+<to be read again> 
+                   _
+l.387   doi = 	 "10.1007/3-540-65193-4_
+                                       29",
+End of file on the terminal!
+
+!  ==> Fatal error occurred, no output PDF file produced!
