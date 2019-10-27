@@ -1,9 +1,5 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: report-config.aux
 The style file: ACM-Reference-Format.bst
+I found no \citation commands---while reading file report-config.aux
 Database file #1: sample-bibliography.bib
-Repeated entry---line 1201 of file sample-bibliography.bib
- : @article{SaeediMEJ10
- :                     ,
-I'm skipping whatever remains of this entry
-Warning--numpages field, but no articleno or eid field, in Bose:DataMining
 (There was 1 error message)

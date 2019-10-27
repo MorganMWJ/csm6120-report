@@ -2,7 +2,7 @@
 %%% Do NOT edit. File created by BibTeX with style
 %%% ACM-Reference-Format-Journals [18-Jan-2012].
 
-\begin{thebibliography}{2}
+\begin{thebibliography}{0}
 
 %%% ====================================================================
 %%% NOTE TO THE USER: you can override these defaults by providing
@@ -36,32 +36,5 @@
 \providecommand\bibinfo[2]{#2}
 \providecommand\natexlab[1]{#1}
 \providecommand\showeprint[2][]{arXiv:#2}
-
-\bibitem[\protect\citeauthoryear{Bose and K~Mahapatra}{Bose and
-  K~Mahapatra}{2001}]%
-        {Bose:DataMining}
-\bibfield{author}{\bibinfo{person}{Indranil Bose} {and} \bibinfo{person}{Radha
-  K~Mahapatra}.} \bibinfo{year}{2001}\natexlab{}.
-\newblock \showarticletitle{Business Data Mining - a machine learning
-  perspective}.
-\newblock \bibinfo{journal}{{\em Information \& Management\/}}
-  \bibinfo{volume}{39}, \bibinfo{number}{3} (\bibinfo{year}{2001}),
-  \bibinfo{pages}{211--225}.
-\newblock
-
-
-\bibitem[\protect\citeauthoryear{Saeedi, Zamani, and Sedighi}{Saeedi
-  et~al\mbox{.}}{2010}]%
-        {SaeediMEJ10}
-\bibfield{author}{\bibinfo{person}{Mehdi Saeedi},
-  \bibinfo{person}{Morteza~Saheb Zamani}, {and} \bibinfo{person}{Mehdi
-  Sedighi}.} \bibinfo{year}{2010}\natexlab{}.
-\newblock \showarticletitle{A library-based synthesis methodology for
-  reversible logic}.
-\newblock \bibinfo{journal}{{\em Microelectron. J.\/}} \bibinfo{volume}{41},
-  \bibinfo{number}{4} (\bibinfo{date}{April} \bibinfo{year}{2010}),
-  \bibinfo{pages}{185--194}.
-\newblock
-
 
 \end{thebibliography}
