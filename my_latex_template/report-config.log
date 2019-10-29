@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.10.27)  27 OCT 2019 21:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.10.29)  29 OCT 2019 21:01
 entering extended mode
 **./report-config.tex
 (report-config.tex
@@ -32,7 +32,6 @@ Package acmart Info: Explicitly selecting natbib mode on input line 106.
 Package acmart Info: Not using anonymous mode on input line 114.
 Package acmart Info: Not using timestamp mode on input line 122.
 Package acmart Info: Not using authordraft mode on input line 132.
-Package acmart Info: Using authordraft mode on input line 141.
 Class acmart Info: Using format sigconf, number 4 on input line 141.
 Class acmart Info: Using fontsize 9pt on input line 199.
 
@@ -354,16 +353,6 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 )
-(C:\Users\mwj7\AppData\Roaming\MiKTeX\2.9\tex/latex/draftwatermark\draftwatermark.sty
-Package: draftwatermark 2015/02/19 1.2 Put a gray textual watermark on document pages
-
-(C:\Users\mwj7\AppData\Roaming\MiKTeX\2.9\tex/latex/everypage\everypage.sty
-Package: everypage 2007/06/20 1.1 Hooks to run on every page
-)
-\sc@wm@hcenter=\skip58
-\sc@wm@vcenter=\skip59
-\sc@wm@fontsize=\skip60
-)
 ("C:\Program Files\MiKTeX 2.9\tex/latex/geometry\geometry.sty"
 Package: geometry 2018/04/16 v5.8 Page Geometry
 \Gm@cnth=\count118
@@ -594,9 +583,9 @@ Package: zi4 2019/05/17 v1.12
 \zifour@ocount=\count123
 )
 (C:\Users\mwj7\AppData\Roaming\MiKTeX\2.9\tex/latex/newtx\newtxmath.sty
-Package: newtxmath 2019/10/23 v1.605
+Package: newtxmath 2019/10/25 v1.606
 
-`newtxmath' v1.605, 2019/10/23 Math macros based originally on txfonts (msharpe)
+`newtxmath' v1.606, 2019/10/25 Math macros based originally on txfonts (msharpe)
 ("C:\Program Files\MiKTeX 2.9\tex/latex/oberdiek\centernot.sty"
 Package: centernot 2016/05/16 v1.4 Centers the not symbol horizontally (HO)
 )
@@ -758,12 +747,12 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@sidebar=\count136
 \fulltextwidth=\dimen141
 \@ACM@labelwidth=\dimen142
-\listisep=\skip61
+\listisep=\skip58
 \num@authorgroups=\count137
 \num@authors=\count138
-\@ACM@badge@width=\skip62
-\@ACM@title@width=\skip63
-\@ACM@badge@skip=\skip64
+\@ACM@badge@width=\skip59
+\@ACM@title@width=\skip60
+\@ACM@badge@skip=\skip61
 Class acmart Info: Printing CCS on input line 1269.
 Class acmart Info: Printing bibformat on input line 1269.
 Class acmart Info: Suppressing folios on input line 1276.
@@ -777,24 +766,19 @@ Excluding comment 'CCSXML'
 \@ACM@commabox=\box39
 \author@bx=\box40
 \author@bx@wd=\dimen143
-\author@bx@sep=\skip65
+\author@bx@sep=\skip62
  (C:\Users\mwj7\AppData\Roaming\MiKTeX\2.9\tex/latex/fancyhdr\fancyhdr.sty
 Package: fancyhdr 2019/01/31 v3.10 Extensive control of page headers and footers
-\f@nch@headwidth=\skip66
-\f@nch@O@elh=\skip67
-\f@nch@O@erh=\skip68
-\f@nch@O@olh=\skip69
-\f@nch@O@orh=\skip70
-\f@nch@O@elf=\skip71
-\f@nch@O@erf=\skip72
-\f@nch@O@olf=\skip73
-\f@nch@O@orf=\skip74
+\f@nch@headwidth=\skip63
+\f@nch@O@elh=\skip64
+\f@nch@O@erh=\skip65
+\f@nch@O@olh=\skip66
+\f@nch@O@orh=\skip67
+\f@nch@O@elf=\skip68
+\f@nch@O@erf=\skip69
+\f@nch@O@olf=\skip70
+\f@nch@O@orf=\skip71
 )
-\ACM@linecount@bx=\box41
-\ACM@linecount@bxht=\skip75
-\ACM@linecount=\count139
-\c@ACM@time@hours=\count140
-\c@ACM@time@minutes=\count141
 \@folio@wd=\dimen144
 \@folio@ht=\dimen145
 \@folio@voffset=\dimen146
@@ -819,15 +803,15 @@ Package: booktabs 2019/10/08 v1.6180339 publication quality tables
 \cmidrulesep=\dimen154
 \cmidrulekern=\dimen155
 \defaultaddspace=\dimen156
-\@cmidla=\count142
-\@cmidlb=\count143
+\@cmidla=\count139
+\@cmidlb=\count140
 \@aboverulesep=\dimen157
 \@belowrulesep=\dimen158
-\@thisruleclass=\count144
-\@lastruleclass=\count145
+\@thisruleclass=\count141
+\@lastruleclass=\count142
 \@thisrulewidth=\dimen159
 )
-\c@theorem=\count146
+\c@theorem=\count143
  Excluding comment 'screenonly'
 Include comment 'printonly' Include comment 'anonsuppress' (report-config.aux)
 \openout1 = `report-config.aux'.
@@ -931,7 +915,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
  ABD: EveryShipout initializing macros
-\AtBeginShipoutBox=\box42
+\AtBeginShipoutBox=\box41
 Package hyperref Info: Link coloring OFF on input line 32.
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\nameref.sty"
@@ -940,7 +924,7 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 ("C:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\gettitlestring.sty"
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count147
+\c@section@level=\count144
 )
 LaTeX Info: Redefining \ref on input line 32.
 LaTeX Info: Redefining \pageref on input line 32.
@@ -952,16 +936,16 @@ LaTeX Info: Redefining \nameref on input line 32.
 
 (C:\Users\mwj7\AppData\Roaming\MiKTeX\2.9\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count148
+\scratchcounter=\count145
 \scratchdimen=\dimen160
-\scratchbox=\box43
-\nofMPsegments=\count149
-\nofMParguments=\count150
+\scratchbox=\box42
+\nofMPsegments=\count146
+\nofMParguments=\count147
 \everyMPshowfont=\toks37
-\MPscratchCnt=\count151
+\MPscratchCnt=\count148
 \MPscratchDim=\dimen161
-\MPnumerator=\count152
-\makeMPintoPDFobject=\count153
+\MPnumerator=\count149
+\makeMPintoPDFobject=\count150
 \everyMPtoPDFconversion=\toks38
 ) ("C:\Program Files\MiKTeX 2.9\tex/latex/oberdiek\epstopdf-base.sty"
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -1008,8 +992,8 @@ Package grfext Info: Graphics extension search list:
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\c@mv@tabular=\count154
-\c@mv@boldtabular=\count155
+\c@mv@tabular=\count151
+\c@mv@boldtabular=\count152
 (C:\Users\mwj7\AppData\Roaming\MiKTeX\2.9\tex/latex/upquote\upquote.sty
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verbatim
 )
@@ -1060,8 +1044,6 @@ File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 (C:\Users\mwj7\AppData\Roaming\MiKTeX\2.9\tex/latex/microtype\mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 10.0pt on input line 80.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
 (Font)              scaled to size 7.0pt on input line 80.
 LaTeX Font Info:    Try loading font information for TS1+LinuxLibertineT-TLF on input line 80.
@@ -1094,61 +1076,47 @@ LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 6.2pt on input line 80.
  (report-body.tex
-LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 8.
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 20.
+(Font)              scaled to size 9.0pt on input line 24.
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/it' will be
-(Font)              scaled to size 9.0pt on input line 20.
+(Font)              scaled to size 9.0pt on input line 24.
+LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 9.0pt on input line 25.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 9.0pt on input line 22.
+(Font)              scaled to size 9.0pt on input line 25.
 
-Overfull \hbox (10.5271pt too wide) in paragraph at lines 22--23
+Overfull \hbox (10.5271pt too wide) in paragraph at lines 25--26
 []\T1/LinuxLibertineT-TLF/b/n/9 Reconstruction abil-ity \T1/LinuxLibertineT-TLF/m/n/9 (-20) (\T1/LinuxLibertineT-TLF/m/i
 t/9 (-20) max-imi-sa-tion\T1/LinuxLibertineT-TLF/m/n/9 (-20) ): The av-er-age weighted
  []
 
 
-Overfull \hbox (9.47787pt too wide) in paragraph at lines 25--26
+Overfull \hbox (9.47787pt too wide) in paragraph at lines 28--29
 []\T1/LinuxLibertineT-TLF/b/n/9 Complexity \T1/LinuxLibertineT-TLF/m/n/9 (-20) (\T1/LinuxLibertineT-TLF/m/it/9 (-20) min
 -imi-sa-tion\T1/LinuxLibertineT-TLF/m/n/9 (-20) ): Num-ber of split-ting points (nodes)
  []
 
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 7.3pt on input line 29.
+(Font)              scaled to size 7.3pt on input line 32.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 5.5pt on input line 29.
-LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 36.135pt on input line 34.
-LaTeX Font Info:    Calculating math sizes for size <36.135> on input line 34.
-LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 36.135pt on input line 34.
-LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 26.37839pt on input line 34.
-LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 19.87434pt on input line 34.
-LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 6.0pt on input line 34.
-[1.1{C:/Users/mwj7/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
-
-]
-<evolution_process_resized.png, id=70, 238.2501pt x 133.9404pt>
+(Font)              scaled to size 5.5pt on input line 32.
+<evolution_process_resized.png, id=49, 238.2501pt x 133.9404pt>
 File: evolution_process_resized.png Graphic file (type png)
 <use evolution_process_resized.png>
-Package pdftex.def Info: evolution_process_resized.png  used on input line 40.
+Package pdftex.def Info: evolution_process_resized.png  used on input line 43.
 (pdftex.def)             Requested size: 379.72124pt x 213.49966pt.
 
-Overfull \hbox (138.57375pt too wide) in paragraph at lines 40--41
+Overfull \hbox (138.57375pt too wide) in paragraph at lines 43--44
  [][] 
  []
 
-LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 6.0pt on input line 85.
-[2.2 <./evolution_process_resized.png (PNG copy)>]
+[1.1{C:/Users/mwj7/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
+
+] [2.2 <./evolution_process_resized.png (PNG copy)>]
 <result_analysis_resized.png, id=87, 224.5188pt x 126.2316pt>
 File: result_analysis_resized.png Graphic file (type png)
 <use result_analysis_resized.png>
-Package pdftex.def Info: result_analysis_resized.png  used on input line 91.
+Package pdftex.def Info: result_analysis_resized.png  used on input line 94.
 (pdftex.def)             Requested size: 224.51823pt x 126.23128pt.
 ) (report-config.bbl
 
@@ -1156,10 +1124,10 @@ Package natbib Warning: Empty `thebibliography' environment on input line 40.
 
 )
 - LAST -
-Extra skip:14.25096pt
-Left:576.08125pt/2.124pt
-Right:563.95428pt/0.0pt
-Output:570.51776pt
+Extra skip:21.23045pt
+Left:486.08125pt/2.124pt
+Right:466.9748pt/0.0pt
+Output:483.02802pt
 LaTeX Font Info:    Font shape `TS1/LinuxBiolinumT-TLF/m/n' will be
 (Font)              scaled to size 9.0pt on input line 87.
  [3.3 <./result_analysis_resized.png (PNG copy)>]
@@ -1172,29 +1140,30 @@ Package rerunfilecheck Info: File `report-config.out' has not changed.
 (rerunfilecheck)             Checksum: 50EEF4CFD41C808CB5F0A639E9EC1048;1344.
  ) 
 Here is how much of TeX's memory you used:
- 18398 strings out of 492895
- 279959 string characters out of 3133481
- 401662 words of memory out of 3000000
- 21517 multiletter control sequences out of 15000+200000
- 193832 words of font info for 309 fonts, out of 3000000 for 9000
+ 18251 strings out of 492895
+ 276625 string characters out of 3133481
+ 403838 words of memory out of 3000000
+ 21390 multiletter control sequences out of 15000+200000
+ 156981 words of font info for 270 fonts, out of 3000000 for 9000
  1302 hyphenation exceptions out of 8191
- 60i,16n,94p,894b,522s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 60i,11n,94p,858b,489s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/mwj7/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/libertine/lbtn_afusau.enc}{C:/Users/mwj7/AppData/Roaming/MiK
 TeX/2.9/fonts/enc/dvips/libertine/lbtn_25tcsq.enc}{C:/Users/mwj7/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/libertine/lb
-tn_7grukw.enc}{C:/Users/mwj7/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/libertine/lbtn_naooyc.enc}{C:/Users/mwj7/AppData
-/Roaming/MiKTeX/2.9/fonts/enc/dvips/libertine/lbtn_nh77jq.enc}{C:/Users/mwj7/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/
-libertine/lbtn_mmutss.enc}{C:/Users/mwj7/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/libertine/lbtn_76gpa5.enc}<C:/Users/
-mwj7/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/newtx/LibertineMathMI.pfb><C:/Users/mwj7/AppData/Roaming/MiKTeX/2.9/f
-onts/type1/public/newtx/LibertineMathMI7.pfb><C:/Users/mwj7/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/libertine/LinB
-iolinumT.pfb><C:/Users/mwj7/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/libertine/LinBiolinumTB.pfb><C:/Users/mwj7/App
-Data/Roaming/MiKTeX/2.9/fonts/type1/public/libertine/LinBiolinumTI.pfb><C:/Users/mwj7/AppData/Roaming/MiKTeX/2.9/fonts/t
-ype1/public/libertine/LinLibertineT.pfb><C:/Users/mwj7/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/libertine/LinLibert
-ineTB.pfb><C:/Users/mwj7/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/libertine/LinLibertineTI.pfb><C:/Users/mwj7/AppDa
-ta/Roaming/MiKTeX/2.9/fonts/type1/public/newtx/txexs.pfb><C:/Users/mwj7/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/ne
-wtx/txmiaX.pfb><C:/Users/mwj7/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/newtx/txsys.pfb>
-Output written on report-config.pdf (3 pages, 564302 bytes).
+tn_oexx6f.enc}{C:/Users/mwj7/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/libertine/lbtn_7grukw.enc}{C:/Users/mwj7/AppData
+/Roaming/MiKTeX/2.9/fonts/enc/dvips/libertine/lbtn_naooyc.enc}{C:/Users/mwj7/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/
+libertine/lbtn_nh77jq.enc}{C:/Users/mwj7/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/libertine/lbtn_76gpa5.enc}{C:/Users/
+mwj7/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/libertine/lbtn_mmutss.enc}<C:/Users/mwj7/AppData/Roaming/MiKTeX/2.9/font
+s/type1/public/newtx/LibertineMathMI.pfb><C:/Users/mwj7/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/newtx/LibertineMat
+hMI7.pfb><C:/Users/mwj7/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/libertine/LinBiolinumT.pfb><C:/Users/mwj7/AppData/
+Roaming/MiKTeX/2.9/fonts/type1/public/libertine/LinBiolinumTB.pfb><C:/Users/mwj7/AppData/Roaming/MiKTeX/2.9/fonts/type1/
+public/libertine/LinBiolinumTI.pfb><C:/Users/mwj7/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/libertine/LinLibertineT.
+pfb><C:/Users/mwj7/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/libertine/LinLibertineTB.pfb><C:/Users/mwj7/AppData/Roa
+ming/MiKTeX/2.9/fonts/type1/public/libertine/LinLibertineTI.pfb><C:/Users/mwj7/AppData/Roaming/MiKTeX/2.9/fonts/type1/pu
+blic/newtx/txexs.pfb><C:/Users/mwj7/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/newtx/txmiaX.pfb><C:/Users/mwj7/AppDat
+a/Roaming/MiKTeX/2.9/fonts/type1/public/newtx/txsys.pfb>
+Output written on report-config.pdf (3 pages, 558560 bytes).
 PDF statistics:
- 159 PDF objects out of 1000 (max. 8388607)
+ 162 PDF objects out of 1000 (max. 8388607)
  28 named destinations out of 1000 (max. 500000)
- 55399 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 53863 words of extra memory for PDF output out of 61914 (max. 10000000)
 
