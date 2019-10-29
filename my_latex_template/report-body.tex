@@ -3,7 +3,7 @@ Understanding the decisions behind Machine Learning (ML) techniques is important
 
 %There are several main approaches to XAI[15], one approach is interpretable machine learning(IML) model extraction. !?remove!?
 
-Traditional tree-based methods from XAI suffer from limitations, due to the greedy nature of tree construction. Using Genetic Programming (GP) [19] we can instead evolve trees instead of constructing them in a greedy manner.
+Traditional tree-based methods from XAI suffer from limitations, due to the greedy nature of tree construction. Using Genetic Programming (GP) [19] we can evolve trees instead of constructing them in a greedy manner.
 
 There are multiple approaches to XAI [15], one approach is the interpretable machine learning (IML) method of model extraction [1]. In this work we propose a new multi-objective GP-based method for model extraction that is applicable to any black-box (arbitrarily complex) classifier.
 %To the best of our knowledge GP has not been used for constructing IML models. In this work we propose a new multi-objective GP-based method for IML model extraction. %Are objectives are:  
@@ -27,18 +27,7 @@ The overall training algorithm is shown in Fig. 1. The black-box classifier is t
 \begin{itemize}
 \item \textbf{Complexity} (\textit{minimisation}): Number of splitting points (nodes) in the tree
 \end{itemize}
-Objective 1:
-\begin{equation} \label{eq:obj1}
-maximise \frac {1}{k} \sum_{i=1}^k f1(predict(fold(i)),blackbox\_predict(fold(i)))
-\end{equation}
-Where $f1$ is the weighted f1-score (weighted by the number of instances per class c)
-\begin{displaymath}
-f1(predicted, real) = (\sum_{c\in C} |C| \times \frac{2\times precision\times recall}{precision+recall})/\sum_{c\in C} |C|
-\end{displaymath}
-Objective 2:
-\begin{equation}
-minimise \sum split\_points
-\end{equation}
+
 \begin{figure}
 \includegraphics[width=0.75\textwidth]{evolution_process_resized}
 \caption{Evolutionary Training Process.}
@@ -74,29 +63,23 @@ For measuring performance, we use a weighted f1-measure scaled to the range 0\ld
 \paragraph{Complexity}
 We define complexity as the number of splitting points in the tree. If constructed features are used they count as multiple splits (f1+f2<=0 would count as 2). For Bayesian rule lists the complexity is measured as the number of rules + the number conjunctions in these rules. For logistic regression complexity is measured as the number of non-zero coefficients.
 \subsubsection{Black-box Methods}
-We chose three of the most common and high performing black-box models. All are implemented in h2o [31].
-\begin{itemize}
-\item Random Forests (with 500 trees)
-\item Gradient Boosting (with 500 trees)
-\item A deep neural network (200 hidden layers with 200 neurons each)
-\end{itemize}
-\textit{Note}: These methods were not finely tuned. Their relative performance is not of importance we are just trying to reconstruct their predictions.
+We chose three high performing black-box models, all implemented in h2o [31]: Random Forests, Gradient Boosting (both with 500 trees) and a deep neural network (200 hidden layers with 200 neurons each).
+
 \subsubsection{Significance Tests}
 To compute whether the difference in reconstruction ability across datasets for each method was statistically significant, we used Friedman tests paired with Nemenyi post-hoc analysis.
 
-To show the average reconstruction ability for each method we present the average accuracy of a 10-fold cross-validation, where each method gets the same train-test sets. The averages are also across the 3 black-box methods therefore for each method, 30 runs are executed for each of the 20 datasets. The goal is for the extraction methods to be invariant to the black-box model used, hence the averaging.
+To show the average reconstruction ability for each method we present the average accuracy of a 10-fold cross-validation, where each method gets the same train-test sets. The averages are also across the 3 black-box methods therefore for each method, 30 runs are executed for each of the 20 datasets.
 \subsection{Results}
-We compare methods based on the number of times each method was dominated. Where domination is defined as another method achieves a simpler representation with the same (or improved) recreation ability. We cannot compare hypervolumes of frontiers as the comparison methods only return a single solution therefore we select the solution from our resultant frontier with the highest reconstruction ability to represent our methods performance.
+We compare methods based on the number of times each method was dominated. \footnote{For our method we select a single solution from our resultant frontier with the highest reconstruction ability to represent our methods performance.} Where domination is defined as another method achieves a simpler representation with the same (or improved) recreation ability.
 
-GP (the proposed method) was not dominated on any of the datasets (Fig. 2). One caveat is that analysing the dominated counts alone is not a comprehensive indicator of performance, since both the simplest possible model (majority class) and the black-box model itself would never be dominated. Another argument is that since GP was the only method which simultaneously balanced these objectives, the measure can be seen as biased towards the proposed method. This is true, but also shows the usefulness of population-based techniques such as GP as they can effectively optimise multiple objectives simultaneously. This shows that multi-objective optimisation is a good choice for IML, as the objectives were optimised better than the existing approaches (in terms of dominance).
+GP (the proposed method) was not dominated on any of the datasets (Fig. 2). The resulting p-values from the significance tests are visualised in Fig. 3. \footnote{One caveat is that analysing the dominated counts alone is not a comprehensive indicator of performance, since both the simplest possible model (majority class) and the black-box model itself would never be dominated.} 
+%Another argument is that since GP was the only method which simultaneously balanced these objectives, the measure can be seen as biased towards the proposed method. This is true, but also shows the usefulness of population-based techniques such as GP as they can effectively optimise multiple objectives simultaneously. This shows that multi-objective optimisation is a good choice for IML, as the objectives were optimised better than the existing approaches (in terms of dominance).
 \begin{center}
 \begin{figure}[h]
 \includegraphics{result_analysis_resized}
 \caption{Statistical significance testing.}
 \end{figure}
 \end{center}
-
-Friedman testing paired with Nemenyi post-hoc analysis is performed to compare whether the difference in accuracies was statistically significant across datasets. The resulting p-values are visualised in Fig. 3.
 \section{Further Analysis}
 To give further insight into the resulting models from the compared IML methods, a comparison is given on the hill-valley dataset. The hill-valley dataset is considered the most challenging as the black-box models had lowest average test accuracy on this dataset. We can see that the proposed method\textquotesingle s resulting tree and the Bayesian rule list are by far the simplest interpretable models, both condense the 200 layer neural-network into small human readable form.
 

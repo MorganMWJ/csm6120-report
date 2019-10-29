@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.10.29)  29 OCT 2019 21:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.10.29)  29 OCT 2019 22:06
 entering extended mode
 **./report-config.tex
 (report-config.tex
@@ -1096,41 +1096,46 @@ Overfull \hbox (9.47787pt too wide) in paragraph at lines 28--29
 -imi-sa-tion\T1/LinuxLibertineT-TLF/m/n/9 (-20) ): Num-ber of split-ting points (nodes)
  []
 
-LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 7.3pt on input line 32.
-LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 5.5pt on input line 32.
 <evolution_process_resized.png, id=49, 238.2501pt x 133.9404pt>
 File: evolution_process_resized.png Graphic file (type png)
 <use evolution_process_resized.png>
-Package pdftex.def Info: evolution_process_resized.png  used on input line 43.
+Package pdftex.def Info: evolution_process_resized.png  used on input line 32.
 (pdftex.def)             Requested size: 379.72124pt x 213.49966pt.
 
-Overfull \hbox (138.57375pt too wide) in paragraph at lines 43--44
+Overfull \hbox (138.57375pt too wide) in paragraph at lines 32--33
  [][] 
  []
 
 [1.1{C:/Users/mwj7/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
-] [2.2 <./evolution_process_resized.png (PNG copy)>]
-<result_analysis_resized.png, id=87, 224.5188pt x 126.2316pt>
+]
+Overfull \hbox (1.36584pt too wide) in paragraph at lines 66--67
+ \T1/LinuxBiolinumT-TLF/m/it/9 (-20) 3.1.5 Black-box Meth-ods.[] \T1/LinuxLibertineT-TLF/m/n/9 (-20) We chose three high
+ per-form-ing black-
+ []
+
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 7.3pt on input line 73.
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 5.5pt on input line 73.
+<result_analysis_resized.png, id=68, 224.5188pt x 126.2316pt>
 File: result_analysis_resized.png Graphic file (type png)
 <use result_analysis_resized.png>
-Package pdftex.def Info: result_analysis_resized.png  used on input line 94.
+Package pdftex.def Info: result_analysis_resized.png  used on input line 79.
 (pdftex.def)             Requested size: 224.51823pt x 126.23128pt.
-) (report-config.bbl
+[2.2 <./evolution_process_resized.png (PNG copy)> <./result_analysis_resized.png (PNG copy)>]) (report-config.bbl
 
 Package natbib Warning: Empty `thebibliography' environment on input line 40.
 
 )
 - LAST -
-Extra skip:21.23045pt
-Left:486.08125pt/2.124pt
-Right:466.9748pt/0.0pt
-Output:483.02802pt
+Extra skip:2.64569pt
+Left:300.67499pt/2.124pt
+Right:300.15329pt/0.0pt
+Output:300.91414pt
 LaTeX Font Info:    Font shape `TS1/LinuxBiolinumT-TLF/m/n' will be
 (Font)              scaled to size 9.0pt on input line 87.
- [3.3 <./result_analysis_resized.png (PNG copy)>]
+ [3.3]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 87.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 87.
  (report-config.aux)
@@ -1140,30 +1145,27 @@ Package rerunfilecheck Info: File `report-config.out' has not changed.
 (rerunfilecheck)             Checksum: 50EEF4CFD41C808CB5F0A639E9EC1048;1344.
  ) 
 Here is how much of TeX's memory you used:
- 18251 strings out of 492895
- 276625 string characters out of 3133481
- 403838 words of memory out of 3000000
- 21390 multiletter control sequences out of 15000+200000
- 156981 words of font info for 270 fonts, out of 3000000 for 9000
+ 18224 strings out of 492895
+ 276123 string characters out of 3133481
+ 392793 words of memory out of 3000000
+ 21389 multiletter control sequences out of 15000+200000
+ 152138 words of font info for 249 fonts, out of 3000000 for 9000
  1302 hyphenation exceptions out of 8191
  60i,11n,94p,858b,489s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/mwj7/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/libertine/lbtn_afusau.enc}{C:/Users/mwj7/AppData/Roaming/MiK
 TeX/2.9/fonts/enc/dvips/libertine/lbtn_25tcsq.enc}{C:/Users/mwj7/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/libertine/lb
-tn_oexx6f.enc}{C:/Users/mwj7/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/libertine/lbtn_7grukw.enc}{C:/Users/mwj7/AppData
-/Roaming/MiKTeX/2.9/fonts/enc/dvips/libertine/lbtn_naooyc.enc}{C:/Users/mwj7/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/
-libertine/lbtn_nh77jq.enc}{C:/Users/mwj7/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/libertine/lbtn_76gpa5.enc}{C:/Users/
-mwj7/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/libertine/lbtn_mmutss.enc}<C:/Users/mwj7/AppData/Roaming/MiKTeX/2.9/font
-s/type1/public/newtx/LibertineMathMI.pfb><C:/Users/mwj7/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/newtx/LibertineMat
-hMI7.pfb><C:/Users/mwj7/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/libertine/LinBiolinumT.pfb><C:/Users/mwj7/AppData/
-Roaming/MiKTeX/2.9/fonts/type1/public/libertine/LinBiolinumTB.pfb><C:/Users/mwj7/AppData/Roaming/MiKTeX/2.9/fonts/type1/
-public/libertine/LinBiolinumTI.pfb><C:/Users/mwj7/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/libertine/LinLibertineT.
-pfb><C:/Users/mwj7/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/libertine/LinLibertineTB.pfb><C:/Users/mwj7/AppData/Roa
-ming/MiKTeX/2.9/fonts/type1/public/libertine/LinLibertineTI.pfb><C:/Users/mwj7/AppData/Roaming/MiKTeX/2.9/fonts/type1/pu
-blic/newtx/txexs.pfb><C:/Users/mwj7/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/newtx/txmiaX.pfb><C:/Users/mwj7/AppDat
-a/Roaming/MiKTeX/2.9/fonts/type1/public/newtx/txsys.pfb>
-Output written on report-config.pdf (3 pages, 558560 bytes).
+tn_7grukw.enc}{C:/Users/mwj7/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/libertine/lbtn_naooyc.enc}{C:/Users/mwj7/AppData
+/Roaming/MiKTeX/2.9/fonts/enc/dvips/libertine/lbtn_nh77jq.enc}{C:/Users/mwj7/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/
+libertine/lbtn_76gpa5.enc}{C:/Users/mwj7/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/libertine/lbtn_mmutss.enc}<C:/Users/
+mwj7/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/newtx/LibertineMathMI.pfb><C:/Users/mwj7/AppData/Roaming/MiKTeX/2.9/f
+onts/type1/public/libertine/LinBiolinumT.pfb><C:/Users/mwj7/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/libertine/LinB
+iolinumTB.pfb><C:/Users/mwj7/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/libertine/LinBiolinumTI.pfb><C:/Users/mwj7/Ap
+pData/Roaming/MiKTeX/2.9/fonts/type1/public/libertine/LinLibertineT.pfb><C:/Users/mwj7/AppData/Roaming/MiKTeX/2.9/fonts/
+type1/public/libertine/LinLibertineTB.pfb><C:/Users/mwj7/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/libertine/LinLibe
+rtineTI.pfb><C:/Users/mwj7/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/newtx/txsys.pfb>
+Output written on report-config.pdf (3 pages, 532710 bytes).
 PDF statistics:
- 162 PDF objects out of 1000 (max. 8388607)
+ 145 PDF objects out of 1000 (max. 8388607)
  28 named destinations out of 1000 (max. 500000)
- 53863 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 51815 words of extra memory for PDF output out of 61914 (max. 10000000)
 
