@@ -3,9 +3,9 @@ Understanding the decisions behind Machine Learning (ML) techniques is important
 
 %There are several main approaches to XAI[15], one approach is interpretable machine learning(IML) model extraction. !?remove!?
 
-Traditional tree-based methods from XAI suffer from limitations, due to the greedy nature of tree construction. Using Genetic Programming (GP) [19] we can evolve trees instead of constructing them in a greedy manner.
+Traditional tree-based methods from XAI suffer from limitations, due to the greedy nature of tree construction. Using Genetic Programming (GP) \cite{Koza:GeneticProgramming} we can evolve trees instead of constructing them in a greedy manner.
 
-There are multiple approaches to XAI [15], one approach is the interpretable machine learning (IML) method of model extraction [1]. In this work we propose a new multi-objective GP-based method for model extraction that is applicable to any black-box (arbitrarily complex) classifier.
+There are multiple approaches to XAI \cite{Karlo:xai}, one approach is the interpretable machine learning (IML) method of model extraction [1]. In this work we propose a new multi-objective GP-based method for model extraction that is applicable to any black-box (arbitrarily complex) classifier.
 %To the best of our knowledge GP has not been used for constructing IML models. In this work we propose a new multi-objective GP-based method for IML model extraction. %Are objectives are:  
 %\begin{itemize}
 %  \item Propose a simple, human-readable tree structure which can be used for reconstructing complex predictions
@@ -66,35 +66,95 @@ We define complexity as the number of splitting points in the tree. If construct
 We chose three high performing black-box models, all implemented in h2o [31]: Random Forests, Gradient Boosting (both with 500 trees) and a deep neural network (200 hidden layers with 200 neurons each).
 
 \subsubsection{Significance Tests}
-To compute whether the difference in reconstruction ability across datasets for each method was statistically significant, we used Friedman tests paired with Nemenyi post-hoc analysis.
-
-To show the average reconstruction ability for each method we present the average accuracy of a 10-fold cross-validation, where each method gets the same train-test sets. The averages are also across the 3 black-box methods therefore for each method, 30 runs are executed for each of the 20 datasets.
+To compute whether the difference in reconstruction ability across datasets for each method was statistically significant, we used Friedman tests paired with Nemenyi post-hoc analysis. To show the average reconstruction ability for each method we present the average accuracy of a 10-fold cross-validation, where each method gets the same train-test sets. The averages are also across the 3 black-box methods therefore for each method, 30 runs are executed for each of the 20 datasets.
 \subsection{Results}
-We compare methods based on the number of times each method was dominated. \footnote{For our method we select a single solution from our resultant frontier with the highest reconstruction ability to represent our methods performance.} Where domination is defined as another method achieves a simpler representation with the same (or improved) recreation ability.
-
-GP (the proposed method) was not dominated on any of the datasets (Fig. 2). The resulting p-values from the significance tests are visualised in Fig. 3. \footnote{One caveat is that analysing the dominated counts alone is not a comprehensive indicator of performance, since both the simplest possible model (majority class) and the black-box model itself would never be dominated.} 
+We compare methods based on the number of times each method was dominated. \footnote{For our method we select a single solution from our resultant frontier with the highest reconstruction ability to represent our methods performance.} Where domination is defined as another method achieves a simpler representation with the same (or improved) recreation ability. GP (the proposed method) was not dominated on any of the datasets (Fig. 2). The resulting p-values from the significance tests are visualised in Fig. 3. \footnote{One caveat is that analysing the dominated counts alone is not a comprehensive indicator of performance, since both the simplest possible model (majority class) and the black-box model itself would never be dominated.} 
 %Another argument is that since GP was the only method which simultaneously balanced these objectives, the measure can be seen as biased towards the proposed method. This is true, but also shows the usefulness of population-based techniques such as GP as they can effectively optimise multiple objectives simultaneously. This shows that multi-objective optimisation is a good choice for IML, as the objectives were optimised better than the existing approaches (in terms of dominance).
+%
 \begin{center}
 \begin{figure}[h]
 \includegraphics{result_analysis_resized}
 \caption{Statistical significance testing.}
 \end{figure}
 \end{center}
-\section{Further Analysis}
-To give further insight into the resulting models from the compared IML methods, a comparison is given on the hill-valley dataset. The hill-valley dataset is considered the most challenging as the black-box models had lowest average test accuracy on this dataset. We can see that the proposed method\textquotesingle s resulting tree and the Bayesian rule list are by far the simplest interpretable models, both condense the 200 layer neural-network into small human readable form.
 
-Looking further the Bayesian rule list just predicts 1 class so is considered overly simplistic. Looking into our evolved tree we can see its splitting points make sense when considering the hill-valley dataset, which "when plotted in order (from 1 through 100) as the Y coordinate, the points will create either a Hill (a `bump' in the terrain) or a Valley (a `dip' in the terrain)" [13]. We can see the tree is checking the first point, and comparing to the point at 30\% (i.e. the 30th feature), or the point at 70\%, where the tree is trying to distinguish between classes by finding the common points for the hills/valleys and checking if these are high or low relative to the training data (e.g. a high point at the start, a low point at 30\%, then a high point at 57\% indicates a valley based on this tree).
+\begin{center}
+\begin{figure}[h]
+\includegraphics{domination_bar_chart}
+\caption{Method domination count.}
+\end{figure}
+\end{center}
 
-Below are the datasets that were most difficult for our method to reconstruct predictions for:
-\begin{itemize}
-\item The Autonuniv-Au7-500 and GesturePhase datasets have 5 classes. As the number of classes increases so does the complexity for tree-based methods. Here the push for smaller trees may need to be relaxed in cases where datasets contain a high number of classes.
-\item Monks-Problems-2 is entirely categorical features. In the proposed method, a categorical node has a branch for each feature -- this potentially overfits to the training data. Combining categorical features into a single branch should be considered for future work.
-\item For eeg-eye-state, the data is sequential/time-series. The proposed method is not optimised/designed for such datasets, so this explains the lower performance.
-\end{itemize}
-\section{CONCLUSIONS AND FUTURE WORK}
-In this work, a novel model (agnostic) extraction method for XAI was proposed. Multi-objective GP is used to learn a simple and interpretable representation of a complex black-box model, which is often able to effectively reproduce the black-box\textquotesingle s predictions. This new method was compared to existing approaches for model extraction, and was found to offer drastically simpler models, with statistically equivalent test accuracy. To our best knowledge, this is the first utilisation of multi-objective optimisation in explainable AI. We also believe this is the first application of GP for model extraction, and shows a promising direction for future developments.
+%\begin{center}
+%\begin{figure}[h]
+%\includegraphics{domination_bar_chart}
+%\caption{Method domination count.}
+%\end{figure}
+%\end{center}
 
-In future work we would like to focus on three main areas. Firstly, can recreation ability be improved without sacrificing simplicity? Secondly, can we find a more suitable measure of complexity to describe human interpretability?  And finally, is it possible to guide the evolution of the models based on human feedback?
+%\begin{figure}
+%\centering
+%\begin{minipage}{.5\textwidth}
+  %\centering
+  %\includegraphics[width=.4\linewidth]{result_analysis_resized}
+  %\captionof{figure}{Statistical significance testing.}
+  %\label{fig:test1}
+%\end{minipage}%
+%\begin{minipage}{.5\textwidth}
+  %\centering
+  %\includegraphics[width=.4\linewidth]{domination_bar_chart}
+  %\captionof{figure}{Method domination count.}
+  %\label{fig:test2}
+%\end{minipage}
+%\end{figure}
+
+%\begin{figure}
+    %\centering
+    %\begin{minipage}{0.5\textwidth}
+        %\centering
+        %\includegraphics{result_analysis_resized} % first figure itself
+        %\caption{Statistical significance testing.}
+    %\end{minipage}%
+    %\begin{minipage}{0.5\textwidth}
+        %\centering
+        %\includegraphics{domination_bar_chart} % second figure itself
+        %\caption{Method domination count.}
+    %\end{minipage}
+%\end{figure}
+
+%\begin{figure*}[htp]
+  %\centering
+  %\subfigure[random caption 1]{\includegraphics[scale=0.38]{image1}}\quad
+  %\subfigure[random caption 2]{\includegraphics[scale=0.38]{image2}}
+%\end{figure*}
+
+%\begin{figure*}
+%\centering
+%\begin{minipage}[b]{.4\textwidth}
+%\includegraphics{domination_bar_chart}
+%\caption{Caption}\label{label-a}
+%\end{minipage}\qquad
+%\begin{minipage}[b]{.4\textwidth}
+%\includegraphics{result_analysis_resized}
+%\caption{Caption}\label{label-b}
+%\end{minipage}
+%\end{figure*}
+
+%\section{Further Analysis}
+%To give further insight into the resulting models from the compared IML methods, a comparison is given on the hill-valley dataset. The hill-valley dataset is considered the most challenging as the black-box models had lowest average test accuracy on this dataset. We can see that the proposed method\textquotesingle s resulting tree and the Bayesian rule list are by far the simplest interpretable models, both condense the 200 layer neural-network into small human readable form.
+%
+%Looking further the Bayesian rule list just predicts 1 class so is considered overly simplistic. Looking into our evolved tree we can see its splitting points make sense when considering the hill-valley dataset, which "when plotted in order (from 1 through 100) as the Y coordinate, the points will create either a Hill (a `bump' in the terrain) or a Valley (a `dip' in the terrain)" [13]. We can see the tree is checking the first point, and comparing to the point at 30\% (i.e. the 30th feature), or the point at 70\%, where the tree is trying to distinguish between classes by finding the common points for the hills/valleys and checking if these are high or low relative to the training data (e.g. a high point at the start, a low point at 30\%, then a high point at 57\% indicates a valley based on this tree).
+%
+%Below are the datasets that were most difficult for our method to reconstruct predictions for:
+%\begin{itemize}
+%\item The Autonuniv-Au7-500 and GesturePhase datasets have 5 classes. As the number of classes increases so does the complexity for tree-based methods. Here the push for smaller trees may need to be relaxed in cases where datasets contain a high number of classes.
+%\item Monks-Problems-2 is entirely categorical features. In the proposed method, a categorical node has a branch for each feature -- this potentially overfits to the training data. Combining categorical features into a single branch should be considered for future work.
+%\item For eeg-eye-state, the data is sequential/time-series. The proposed method is not optimised/designed for such datasets, so this explains the lower performance.
+%\end{itemize}
+%\section{CONCLUSIONS AND FUTURE WORK}
+%In this work, a novel model (agnostic) extraction method for XAI was proposed. Multi-objective GP is used to learn a simple and interpretable representation of a complex black-box model, which is often able to effectively reproduce the black-box\textquotesingle s predictions. This new method was compared to existing approaches for model extraction, and was found to offer drastically simpler models, with statistically equivalent test accuracy. To our best knowledge, this is the first utilisation of multi-objective optimisation in explainable AI. We also believe this is the first application of GP for model extraction, and shows a promising direction for future developments.
+%
+%In future work we would like to focus on three main areas. Firstly, can recreation ability be improved without sacrificing simplicity? Secondly, can we find a more suitable measure of complexity to describe human interpretability?  And finally, is it possible to guide the evolution of the models based on human feedback?
 
 
 

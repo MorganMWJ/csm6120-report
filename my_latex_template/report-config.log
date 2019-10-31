@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.10.29)  29 OCT 2019 22:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.10.31)  31 OCT 2019 22:07
 entering extended mode
 **./report-config.tex
 (report-config.tex
@@ -1076,6 +1076,9 @@ LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 6.2pt on input line 80.
  (report-body.tex
+
+Package natbib Warning: Citation `Karlo:xai' on page 1 undefined on input line 8.
+
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
 (Font)              scaled to size 9.0pt on input line 24.
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/it' will be
@@ -1096,7 +1099,7 @@ Overfull \hbox (9.47787pt too wide) in paragraph at lines 28--29
 -imi-sa-tion\T1/LinuxLibertineT-TLF/m/n/9 (-20) ): Num-ber of split-ting points (nodes)
  []
 
-<evolution_process_resized.png, id=49, 238.2501pt x 133.9404pt>
+<evolution_process_resized.png, id=42, 238.2501pt x 133.9404pt>
 File: evolution_process_resized.png Graphic file (type png)
 <use evolution_process_resized.png>
 Package pdftex.def Info: evolution_process_resized.png  used on input line 32.
@@ -1115,43 +1118,59 @@ Overfull \hbox (1.36584pt too wide) in paragraph at lines 66--67
  []
 
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 7.3pt on input line 73.
+(Font)              scaled to size 7.3pt on input line 71.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 5.5pt on input line 73.
-<result_analysis_resized.png, id=68, 224.5188pt x 126.2316pt>
+(Font)              scaled to size 5.5pt on input line 71.
+<result_analysis_resized.png, id=62, 125.0271pt x 60.4659pt>
 File: result_analysis_resized.png Graphic file (type png)
 <use result_analysis_resized.png>
-Package pdftex.def Info: result_analysis_resized.png  used on input line 79.
-(pdftex.def)             Requested size: 224.51823pt x 126.23128pt.
-[2.2 <./evolution_process_resized.png (PNG copy)> <./result_analysis_resized.png (PNG copy)>]) (report-config.bbl
+Package pdftex.def Info: result_analysis_resized.png  used on input line 76.
+(pdftex.def)             Requested size: 125.02678pt x 60.46573pt.
+<domination_bar_chart.png, id=63, 295.1025pt x 192.72pt>
+File: domination_bar_chart.png Graphic file (type png)
+<use domination_bar_chart.png>
+Package pdftex.def Info: domination_bar_chart.png  used on input line 83.
+(pdftex.def)             Requested size: 295.10176pt x 192.71951pt.
 
-Package natbib Warning: Empty `thebibliography' environment on input line 40.
+Overfull \hbox (53.95427pt too wide) in paragraph at lines 83--84
+ [][] 
+ []
 
-)
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) (report-config.bbl)
+
+Package natbib Warning: There were undefined citations.
+
 - LAST -
-Extra skip:2.64569pt
-Left:300.67499pt/2.124pt
-Right:300.15329pt/0.0pt
-Output:300.91414pt
+Extra skip:11.49417pt
+Left:593.02463pt/2.124pt
+Right:581.25443pt/2.40002pt
+Output:590.63953pt
+[2.2 <./evolution_process_resized.png (PNG copy)> <./result_analysis_resized.png>]
 LaTeX Font Info:    Font shape `TS1/LinuxBiolinumT-TLF/m/n' will be
 (Font)              scaled to size 9.0pt on input line 87.
- [3.3]
+ [3.3
+
+ <./domination_bar_chart.png>]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 87.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 87.
- (report-config.aux)
+
+(report-config.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 87.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 87.
 Package rerunfilecheck Info: File `report-config.out' has not changed.
-(rerunfilecheck)             Checksum: 50EEF4CFD41C808CB5F0A639E9EC1048;1344.
+(rerunfilecheck)             Checksum: 8F227B564315F2305B6F1DB122965474;1002.
  ) 
 Here is how much of TeX's memory you used:
- 18224 strings out of 492895
- 276123 string characters out of 3133481
- 392793 words of memory out of 3000000
- 21389 multiletter control sequences out of 15000+200000
- 152138 words of font info for 249 fonts, out of 3000000 for 9000
+ 18226 strings out of 492895
+ 276214 string characters out of 3133481
+ 407820 words of memory out of 3000000
+ 21399 multiletter control sequences out of 15000+200000
+ 151319 words of font info for 243 fonts, out of 3000000 for 9000
  1302 hyphenation exceptions out of 8191
- 60i,11n,94p,858b,489s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 60i,11n,94p,859b,489s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/mwj7/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/libertine/lbtn_afusau.enc}{C:/Users/mwj7/AppData/Roaming/MiK
 TeX/2.9/fonts/enc/dvips/libertine/lbtn_25tcsq.enc}{C:/Users/mwj7/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/libertine/lb
 tn_7grukw.enc}{C:/Users/mwj7/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/libertine/lbtn_naooyc.enc}{C:/Users/mwj7/AppData
@@ -1163,9 +1182,9 @@ iolinumTB.pfb><C:/Users/mwj7/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/liber
 pData/Roaming/MiKTeX/2.9/fonts/type1/public/libertine/LinLibertineT.pfb><C:/Users/mwj7/AppData/Roaming/MiKTeX/2.9/fonts/
 type1/public/libertine/LinLibertineTB.pfb><C:/Users/mwj7/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/libertine/LinLibe
 rtineTI.pfb><C:/Users/mwj7/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/newtx/txsys.pfb>
-Output written on report-config.pdf (3 pages, 532710 bytes).
+Output written on report-config.pdf (3 pages, 529519 bytes).
 PDF statistics:
- 145 PDF objects out of 1000 (max. 8388607)
+ 141 PDF objects out of 1000 (max. 8388607)
  28 named destinations out of 1000 (max. 500000)
- 51815 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 51804 words of extra memory for PDF output out of 61914 (max. 10000000)
 

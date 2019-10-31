@@ -1,5 +1,5 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: report-config.aux
 The style file: ACM-Reference-Format.bst
-I found no \citation commands---while reading file report-config.aux
 Database file #1: sample-bibliography.bib
-(There was 1 error message)
+Warning--I didn't find a database entry for "Karlo:xai"
+(There was 1 warning)
