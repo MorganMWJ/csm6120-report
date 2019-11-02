@@ -2,7 +2,7 @@
 %%% Do NOT edit. File created by BibTeX with style
 %%% ACM-Reference-Format-Journals [18-Jan-2012].
 
-\begin{thebibliography}{1}
+\begin{thebibliography}{11}
 
 %%% ====================================================================
 %%% NOTE TO THE USER: you can override these defaults by providing
@@ -37,6 +37,58 @@
 \providecommand\natexlab[1]{#1}
 \providecommand\showeprint[2][]{arXiv:#2}
 
+\bibitem[\protect\citeauthoryear{Bastani, Kim, and Bastani}{Bastani
+  et~al\mbox{.}}{2017}]%
+        {Bastani:modelExtarct}
+\bibfield{author}{\bibinfo{person}{Osbert Bastani}, \bibinfo{person}{Carolyn
+  Kim}, {and} \bibinfo{person}{Hamsa Bastani}.}
+  \bibinfo{year}{2017}\natexlab{}.
+\newblock \showarticletitle{Interpretability via model extraction.}
+\newblock \bibinfo{journal}{{\em arXiv preprint\/}} \bibinfo{volume}{3},
+  \bibinfo{number}{0977} (\bibinfo{year}{2017}).
+\newblock
+\showeprint{cs/170609773}
+
+
+\bibitem[\protect\citeauthoryear{Beyer and Schwefel}{Beyer and
+  Schwefel}{2002}]%
+        {Beyer:evo_strat}
+\bibfield{author}{\bibinfo{person}{Hans-Georg Beyer} {and}
+  \bibinfo{person}{Hans-Paul Schwefel}.} \bibinfo{year}{2002}\natexlab{}.
+\newblock \showarticletitle{Evolution strategies–A comprehensive
+  introduction}.
+\newblock \bibinfo{journal}{{\em Natural computing\/}} \bibinfo{volume}{1},
+  \bibinfo{number}{1} (\bibinfo{year}{2002}), \bibinfo{pages}{3--52}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Deb, Tran, and Ghose}{Deb
+  et~al\mbox{.}}{2002}]%
+        {Deb:nsga2}
+\bibfield{author}{\bibinfo{person}{Kalyanmoy Deb}, \bibinfo{person}{Truyen
+  Tran}, {and} \bibinfo{person}{Aditya Ghose}.}
+  \bibinfo{year}{2002}\natexlab{}.
+\newblock \showarticletitle{A fast and elitist multiobjective genetic
+  algorithm: NSGA-II.}
+\newblock \bibinfo{journal}{{\em IEEE transactions on evolutionary
+  computation\/}} \bibinfo{volume}{6}, \bibinfo{number}{2}
+  (\bibinfo{year}{2002}), \bibinfo{pages}{182--197}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Dosilovic, Brcic, and Hlupic}{Dosilovic
+  et~al\mbox{.}}{2018}]%
+        {Karlo:xai}
+\bibfield{author}{\bibinfo{person}{Filip~Karlo Dosilovic},
+  \bibinfo{person}{Mario Brcic}, {and} \bibinfo{person}{Nikica Hlupic}.}
+  \bibinfo{year}{2018}\natexlab{}.
+\newblock \showarticletitle{Explainable artificial intelligence: A survey.}
+\newblock \bibinfo{journal}{{\em Convention on Information and Communication
+  Technology, Electronics and Microelectronics (MIPRO).\/}}
+  \bibinfo{volume}{41} (\bibinfo{year}{2018}), \bibinfo{pages}{0210--0215}.
+\newblock
+
+
 \bibitem[\protect\citeauthoryear{Koza}{Koza}{1994}]%
         {Koza:GeneticProgramming}
 \bibfield{author}{\bibinfo{person}{John~R Koza}.}
@@ -47,6 +99,82 @@
   \bibinfo{volume}{4}, \bibinfo{number}{2} (\bibinfo{year}{1994}),
   \bibinfo{pages}{87--112}.
 \newblock
+
+
+\bibitem[\protect\citeauthoryear{Madl}{Madl}{2018}]%
+        {skimltree}
+\bibfield{author}{\bibinfo{person}{Tamas Madl}.}
+  \bibinfo{year}{2018}\natexlab{}.
+\newblock \bibinfo{title}{Sklearn interpretable tree}.
+\newblock   (\bibinfo{year}{2018}).
+\newblock
+\showURL{%
+\url{https://github.com/tmadl/sklearn-interpretable-tree}}
+
+
+\bibitem[\protect\citeauthoryear{Montana}{Montana}{1995}]%
+        {Montana:stgp}
+\bibfield{author}{\bibinfo{person}{David~J Montana}.}
+  \bibinfo{year}{1995}\natexlab{}.
+\newblock \showarticletitle{Strongly typed genetic programming}.
+\newblock \bibinfo{journal}{{\em Evolutionary Computation\/}}
+  \bibinfo{volume}{3}, \bibinfo{number}{2} (\bibinfo{year}{1995}),
+  \bibinfo{pages}{199--230}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Pedregosa, Varoquaux, Gramfort, Michel,
+  Thirion, Grisel, Blondel, Prettenhofer, Weiss, Dubourg, Vanderplas, Passos,
+  Cournapeau, Brucher, Perrot, and Duchesnay}{Pedregosa et~al\mbox{.}}{2011}]%
+        {Pedregosa:sickit}
+\bibfield{author}{\bibinfo{person}{F. Pedregosa}, \bibinfo{person}{G.
+  Varoquaux}, \bibinfo{person}{A. Gramfort}, \bibinfo{person}{V. Michel},
+  \bibinfo{person}{B. Thirion}, \bibinfo{person}{O. Grisel},
+  \bibinfo{person}{M. Blondel}, \bibinfo{person}{P. Prettenhofer},
+  \bibinfo{person}{R. Weiss}, \bibinfo{person}{V. Dubourg}, \bibinfo{person}{J.
+  Vanderplas}, \bibinfo{person}{A. Passos}, \bibinfo{person}{D. Cournapeau},
+  \bibinfo{person}{M. Brucher}, \bibinfo{person}{M. Perrot}, {and}
+  \bibinfo{person}{E Duchesnay}.} \bibinfo{year}{2011}\natexlab{}.
+\newblock \showarticletitle{Scikit-learn: Machine Learning in Python}.
+\newblock \bibinfo{journal}{{\em Journal of Machine Learning Research\/}}
+  \bibinfo{volume}{12} (\bibinfo{year}{2011}), \bibinfo{pages}{2825--2830}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{team}{team}{2015}]%
+        {H2o}
+\bibfield{author}{\bibinfo{person}{The~H2O.ai team}.}
+  \bibinfo{year}{2015}\natexlab{}.
+\newblock \bibinfo{title}{h2o: Python Interface for H2O}.
+\newblock   (\bibinfo{year}{2015}).
+\newblock
+\showURL{%
+\url{http://www.h2o.ai}}
+
+
+\bibitem[\protect\citeauthoryear{Vanschoren, Rijn, Bischl, and
+  Torgo}{Vanschoren et~al\mbox{.}}{2013}]%
+        {Van:openml}
+\bibfield{author}{\bibinfo{person}{Joaquin Vanschoren},
+  \bibinfo{person}{JanN.~van Rijn}, \bibinfo{person}{Bernd Bischl}, {and}
+  \bibinfo{person}{Luis Torgo}.} \bibinfo{year}{2013}\natexlab{}.
+\newblock \showarticletitle{OpenML: Networked Science in Machine Learning}.
+\newblock \bibinfo{journal}{{\em SIGKDD Explorations\/}} \bibinfo{volume}{15},
+  \bibinfo{number}{2} (\bibinfo{year}{2013}), \bibinfo{pages}{49--60}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Yang, Rudin, and Seltzer}{Yang
+  et~al\mbox{.}}{2016}]%
+        {Yang:bayrule}
+\bibfield{author}{\bibinfo{person}{Hongyu Yang}, \bibinfo{person}{Cynthia
+  Rudin}, {and} \bibinfo{person}{Margo Seltzer}.}
+  \bibinfo{year}{2016}\natexlab{}.
+\newblock \showarticletitle{Scalable Bayesian rule lists}.
+\newblock \bibinfo{journal}{{\em arXiv preprint\/}} \bibinfo{volume}{0},
+  \bibinfo{number}{0861} (\bibinfo{year}{2016}).
+\newblock
+\showeprint{cs/160208610}
 
 
 \end{thebibliography}

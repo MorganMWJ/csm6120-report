@@ -5,7 +5,7 @@ Understanding the decisions behind Machine Learning (ML) techniques is important
 
 Traditional tree-based methods from XAI suffer from limitations, due to the greedy nature of tree construction. Using Genetic Programming (GP) \cite{Koza:GeneticProgramming} we can evolve trees instead of constructing them in a greedy manner.
 
-There are multiple approaches to XAI \cite{Karlo:xai}, one approach is the interpretable machine learning (IML) method of model extraction [1]. In this work we propose a new multi-objective GP-based method for model extraction that is applicable to any black-box (arbitrarily complex) classifier.
+There are multiple approaches to XAI \cite{Karlo:xai}, one approach is the interpretable machine learning (IML) method of model extraction \cite{Bastani:modelExtarct}. In this work we propose a new multi-objective GP-based method for model extraction that is applicable to any black-box (arbitrarily complex) classifier.
 %To the best of our knowledge GP has not been used for constructing IML models. In this work we propose a new multi-objective GP-based method for IML model extraction. %Are objectives are:  
 %\begin{itemize}
 %  \item Propose a simple, human-readable tree structure which can be used for reconstructing complex predictions
@@ -17,7 +17,7 @@ There are multiple approaches to XAI \cite{Karlo:xai}, one approach is the inter
 
 \section{The New Method}
 %In this section, a novel tree-based method is proposed for XAI.
-We use NSGAII [11], paired with strongly-typed GP (STGP) [24], to evolve decision tree-like structures, which simultaneously balance the complexity and the accuracy of the trees. Our goal is to outperform greedy methods, while still being computationally feasible. Another benefit of this approach is that a Pareto front of non-dominated trees is produced instead of just a single tree. This is useful for XAI as it allows a user to select a tree for visualisation at a desired complexity to accuracy trade-off point along the front.
+We use NSGA-II \cite{Deb:nsga2}, paired with strongly-typed GP (STGP) \cite{Montana:stgp}, to evolve decision tree-like structures, which simultaneously balance the complexity and the accuracy of the trees. Our goal is to outperform greedy methods, while still being computationally feasible. Another benefit of this approach is that a Pareto front of non-dominated trees is produced instead of just a single tree. This is useful for XAI as it allows a user to select a tree for visualisation at a desired complexity to accuracy trade-off point along the front.
 \subsection{Overall Algorithm}
 The overall training algorithm is shown in Fig. 1. The black-box classifier is trained once only on the original data (x and y values), then the evolutionary process is performed based on the resulting predictions (\^{y}) from this black-box model. The evolutionary algorithm never sees the original labels (y), as this is instead attempting to recreate the predicted labels (\^{y}). At the end of the evolutionary run, the result is a set of Pareto optimal models/trees which approximate the complex black-box model. Only the model with the highest reconstructive ability is used here. The overall evolutionary process is similar to NSGA-II. When selecting individuals, the non-dominated sorting in NSGA-II algorithm is used to rank the individuals.
 \subsubsection{Objective Functions}
@@ -29,7 +29,7 @@ The overall training algorithm is shown in Fig. 1. The black-box classifier is t
 \end{itemize}
 
 \begin{figure}
-\includegraphics[width=0.75\textwidth]{evolution_process_resized}
+\includegraphics[width=0.75\textwidth]{evolution_process}
 \caption{Evolutionary Training Process.}
 \end{figure}
 
@@ -45,25 +45,25 @@ Using constructed features is beneficial to XAI because simpler rules are learnt
 \section{Experiments}
 \subsection{Experiment Details}
 \subsubsection{Datasets}
-A broad range of 30 datasets from the OpenML repository [33] were used for comparison. These were the 20 most run binary datasets, and 10 most run multiclass datasets. The datasets were restricted to less than 15000 instances, less than 5 classes, and no missing values. These datasets are from a variety of domains, and have a varying number of features (both categorical and numeric), classes, and instances.
+A broad range of 30 datasets from the OpenML repository \cite{Van:openml} were used for comparison. These were the 20 most run binary datasets, and 10 most run multiclass datasets. The datasets were restricted to less than 15000 instances, less than 5 classes, and no missing values. These datasets are from a variety of domains, and have a varying number of features (both categorical and numeric), classes, and instances.
 \subsubsection{Comparison Methods}
 Current state-of-the-art approaches to model extraction were trialled:
 \begin{itemize}
-\item Bayesian rule lists [35] (as pysbrl on pip)
-\item A (h2o) decision tree [31]
-\item A simplified (scikit-learn) [25] decision tree [22]
+\item Bayesian rule lists \cite{Yang:bayrule} (as pysbrl on pip)
+\item A (h2o) decision tree \cite{H2o}
+\item A simplified (scikit-learn) \cite{Pedregosa:sickit} decision tree \cite{skimltree}
 \item Logistic regression with L1-regularization (from scikit-learn)
 \end{itemize}
 Pre-Processing: One-hot-encoding was required for the scikit-learn methods to support categorical features. Multi-interval discretization is applied for the Bayesian rule lists to support continuous features.
 \subsubsection{GP Parameter Settings}
-The evolutionary search was run for 50 generations, with 100 trees in each generation. Trees were limited to a maximum height of 17. A crossover rate of 0.8 was used, and a mutation rate of 0.2. Top performing individuals are never lost, as the $\mu + \lambda$ algorithm [2] is used, with both values set to the population size.
+The evolutionary search was run for 50 generations, with 100 trees in each generation. Trees were limited to a maximum height of 17. A crossover rate of 0.8 was used, and a mutation rate of 0.2. Top performing individuals are never lost, as the $\mu + \lambda$ algorithm \cite{Beyer:evo_strat} is used, with both values set to the population size.
 \subsubsection{Evaluation Measures}
 \paragraph{Classification Performance}
 For measuring performance, we use a weighted f1-measure scaled to the range 0\ldots100.
 \paragraph{Complexity}
 We define complexity as the number of splitting points in the tree. If constructed features are used they count as multiple splits (f1+f2<=0 would count as 2). For Bayesian rule lists the complexity is measured as the number of rules + the number conjunctions in these rules. For logistic regression complexity is measured as the number of non-zero coefficients.
 \subsubsection{Black-box Methods}
-We chose three high performing black-box models, all implemented in h2o [31]: Random Forests, Gradient Boosting (both with 500 trees) and a deep neural network (200 hidden layers with 200 neurons each).
+We chose three high performing black-box models, all implemented in h2o \cite{H2o}: Random Forests, Gradient Boosting (both with 500 trees) and a deep neural network (200 hidden layers with 200 neurons each).
 
 \subsubsection{Significance Tests}
 To compute whether the difference in reconstruction ability across datasets for each method was statistically significant, we used Friedman tests paired with Nemenyi post-hoc analysis. To show the average reconstruction ability for each method we present the average accuracy of a 10-fold cross-validation, where each method gets the same train-test sets. The averages are also across the 3 black-box methods therefore for each method, 30 runs are executed for each of the 20 datasets.
