@@ -55,78 +55,19 @@ To compute whether the difference in reconstruction ability across datasets for 
 
 To show the average reconstruction ability for each method we present the average accuracy of a 10-fold cross-validation, where each method gets the same train-test sets. The averages are also across the 3 black-box methods therefore for each method, 30 runs are executed for each of the 20 datasets.
 \subsection{Results}
-We compare methods based on the number of times each method was dominated. For our method we select a single solution from our resultant frontier with the highest reconstruction ability to represent our methods performance. Where domination is defined as another method achieves a simpler representation with the same (or improved) recreation ability. GP (the proposed method) was not dominated on any of the datasets (Fig. 3). \footnote{One caveat is that analysing the dominated counts alone is not a comprehensive indicator of performance, since both the simplest possible model (majority class) and the black-box model itself would never be dominated.} The resulting p-values from the significance tests are visualised in Fig. \ref{stats}.
+We compare methods based on the number of times each method was dominated. For our method we select a single solution from our resultant frontier with the highest reconstruction ability to represent our methods performance. Where domination is defined as another method achieves a simpler representation with the same (or improved) recreation ability. GP (the proposed method) was not dominated on any of the datasets (Fig. \ref{fig:results}). \footnote{One caveat is that analysing the dominated counts alone is not a comprehensive indicator of performance, since both the simplest possible model (majority class) and the black-box model itself would never be dominated.} The resulting p-values from the significance tests are visualised in Fig. \ref{fig:results}.
 %Another argument is that since GP was the only method which simultaneously balanced these objectives, the measure can be seen as biased towards the proposed method. This is true, but also shows the usefulness of population-based techniques such as GP as they can effectively optimise multiple objectives simultaneously. This shows that multi-objective optimisation is a good choice for IML, as the objectives were optimised better than the existing approaches (in terms of dominance).
 %
+
+
+%Two figures put into one image to fit available space%
 \begin{center}
 \begin{figure}[h]
-\includegraphics{result_analysis_resized}
-\caption{Statistical significance testing.}
-\label{stats}
+\includegraphics[width=\columnwidth]{results}
+\caption{Method domination count (left) alongside Statistical significance testing (right).}
+\label{fig:results}
 \end{figure}
 \end{center}
-
-\begin{center}
-\begin{figure}[h]
-\includegraphics{domination_bar_chart}
-\caption{Method domination count.}
-\end{figure}
-\end{center}
-
-%\begin{center}
-%\begin{figure}[h]
-%\includegraphics{domination_bar_chart}
-%\caption{Method domination count.}
-%\end{figure}
-%\end{center}
-
-%\begin{figure}
-%\centering
-%\begin{minipage}{.5\textwidth}
-  %\centering
-  %\includegraphics[width=.4\linewidth]{result_analysis_resized}
-  %\captionof{figure}{Statistical significance testing.}
-  %\label{fig:test1}
-%\end{minipage}%
-%\begin{minipage}{.5\textwidth}
-  %\centering
-  %\includegraphics[width=.4\linewidth]{domination_bar_chart}
-  %\captionof{figure}{Method domination count.}
-  %\label{fig:test2}
-%\end{minipage}
-%\end{figure}
-
-%\begin{figure}
-    %\centering
-    %\begin{minipage}{0.5\textwidth}
-        %\centering
-        %\includegraphics{result_analysis_resized} % first figure itself
-        %\caption{Statistical significance testing.}
-    %\end{minipage}%
-    %\begin{minipage}{0.5\textwidth}
-        %\centering
-        %\includegraphics{domination_bar_chart} % second figure itself
-        %\caption{Method domination count.}
-    %\end{minipage}
-%\end{figure}
-
-%\begin{figure*}[htp]
-  %\centering
-  %\subfigure[random caption 1]{\includegraphics[scale=0.38]{image1}}\quad
-  %\subfigure[random caption 2]{\includegraphics[scale=0.38]{image2}}
-%\end{figure*}
-
-%\begin{figure*}
-%\centering
-%\begin{minipage}[b]{.4\textwidth}
-%\includegraphics{domination_bar_chart}
-%\caption{Caption}\label{label-a}
-%\end{minipage}\qquad
-%\begin{minipage}[b]{.4\textwidth}
-%\includegraphics{result_analysis_resized}
-%\caption{Caption}\label{label-b}
-%\end{minipage}
-%\end{figure*}
 
 
 
