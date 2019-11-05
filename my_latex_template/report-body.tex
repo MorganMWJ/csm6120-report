@@ -10,15 +10,15 @@ We use NSGA-II \cite{Deb:nsga2}, paired with strongly-typed GP (STGP) \cite{Mont
 \subsection{Overall Algorithm}
 The overall training algorithm is shown in figure \ref{fig:evolution}. The black-box classifier is trained once only on the original data (x and y values), then the evolutionary process is performed based on the resulting predictions (\^{y}) from this black-box model. The evolutionary algorithm never sees the original labels (y), as this is instead attempting to recreate the predicted labels (\^{y}). At the end of the evolutionary run, the result is a set of Pareto optimal models/trees which approximate the complex black-box model. Only the model with the highest reconstructive ability is used here. The overall evolutionary process is similar to NSGA-II. When selecting individuals, the non-dominated sorting in NSGA-II algorithm is used to rank the individuals.
 \subsubsection{Objective Functions}
-\begin{itemize}
-\item \textbf{Reconstruction ability} (\textit{maximisation}): The average weighted f1 metric as result of an internal (training set only) 3-fold (k=3) cross-validation on the tree
-\end{itemize}
-\begin{itemize}
-\item \textbf{Complexity} (\textit{minimisation}): Number of splitting points (nodes) in the tree
-\end{itemize}
+%\begin{itemize}
+\paragraph{\textbf{Reconstruction ability}} (\textit{maximisation}): The average weighted f1 metric as result of an internal (training set only) 3-fold (k=3) cross-validation on the tree
+
+\paragraph{\textbf{Complexity}} (\textit{minimisation}): Number of splitting points (nodes) in the tree
+%\end{itemize}
+
 
 \begin{figure}
-\includegraphics[width=0.75\textwidth]{evolution_process}
+\includegraphics[width=\columnwidth]{evolution_process}
 \caption{Evolutionary Training Process.}
 \label{fig:evolution}
 \end{figure}
@@ -39,7 +39,7 @@ Current state-of-the-art approaches to model extraction were trialled:
 \item A simplified (scikit-learn) decision tree
 \item Logistic regression with L1-regularization (from scikit-learn)
 \end{itemize}
-Pre-Processing: One-hot-encoding was required for the scikit-learn methods to support categorical features. Multi-interval discretization is applied for the Bayesian rule lists to support continuous features.
+Pre-Processing: One-hot-encoding was required for the scikit-learn \cite{Pedregosa:sickit} methods to support categorical features. Multi-interval discretization is applied for the Bayesian rule lists to support continuous features.
 \subsubsection{GP Parameter Settings}
 The evolutionary search was run for 50 generations, with 100 trees in each generation. Trees were limited to a maximum height of 17. A crossover rate of 0.8 was used, and a mutation rate of 0.2. Top performing individuals are never lost, as the $\mu + \lambda$ algorithm \cite{Beyer:evo_strat} is used, with both values set to the population size.
 \subsubsection{Evaluation Measures}
@@ -55,7 +55,7 @@ To compute whether the difference in reconstruction ability across datasets for 
 
 To show the average reconstruction ability for each method we present the average accuracy of a 10-fold cross-validation, where each method gets the same train-test sets. The averages are also across the 3 black-box methods therefore for each method, 30 runs are executed for each of the 20 datasets.
 \subsection{Results}
-We compare methods based on the number of times each method was dominated. For our method we select a single solution from our resultant frontier with the highest reconstruction ability to represent our methods performance. Where domination is defined as another method achieves a simpler representation with the same (or improved) recreation ability. GP (the proposed method) was not dominated on any of the datasets (Fig. \ref{fig:results}). \footnote{One caveat is that analysing the dominated counts alone is not a comprehensive indicator of performance, since both the simplest possible model (majority class) and the black-box model itself would never be dominated.} The resulting p-values from the significance tests are visualised in Fig. \ref{fig:results}.
+We compare methods based on the number of times each method was dominated. Where domination is defined as another method achieves a simpler representation with the same (or improved) recreation ability. For our method we select a single solution from our resultant frontier with the highest reconstruction ability to represent our methods performance. GP (the proposed method) was not dominated on any of the datasets (Fig. \ref{fig:results}). \footnote{One caveat is that analysing the dominated counts alone is not a comprehensive indicator of performance, since both the simplest possible model (majority class) and the black-box model itself would never be dominated.} The resulting p-values from the significance tests are visualised in Fig. \ref{fig:results}. From this, we are able to conclude that the proposed method\textquotesingle s model was significantly simpler while achieving statistically equivalent accuracy to other approaches\textquotesingle{} more complex models.
 %Another argument is that since GP was the only method which simultaneously balanced these objectives, the measure can be seen as biased towards the proposed method. This is true, but also shows the usefulness of population-based techniques such as GP as they can effectively optimise multiple objectives simultaneously. This shows that multi-objective optimisation is a good choice for IML, as the objectives were optimised better than the existing approaches (in terms of dominance).
 %
 

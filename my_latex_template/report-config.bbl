@@ -55,7 +55,7 @@
         {Beyer:evo_strat}
 \bibfield{author}{\bibinfo{person}{Hans-Georg Beyer} {and}
   \bibinfo{person}{Hans-Paul Schwefel}.} \bibinfo{year}{2002}\natexlab{}.
-\newblock \showarticletitle{Evolution strategies–A comprehensive
+\newblock \showarticletitle{Evolution strategies {\-} A comprehensive
   introduction}.
 \newblock \bibinfo{journal}{{\em Natural computing\/}} \bibinfo{volume}{1},
   \bibinfo{number}{1} (\bibinfo{year}{2002}), \bibinfo{pages}{3--52}.
@@ -89,18 +89,6 @@
 \newblock
 
 
-\bibitem[\protect\citeauthoryear{Koza}{Koza}{1994}]%
-        {Koza:GeneticProgramming}
-\bibfield{author}{\bibinfo{person}{John~R Koza}.}
-  \bibinfo{year}{1994}\natexlab{}.
-\newblock \showarticletitle{Genetic programming as a means for programming
-  computers by natural selection}.
-\newblock \bibinfo{journal}{{\em Statistics and computing\/}}
-  \bibinfo{volume}{4}, \bibinfo{number}{2} (\bibinfo{year}{1994}),
-  \bibinfo{pages}{87--112}.
-\newblock
-
-
 \bibitem[\protect\citeauthoryear{Montana}{Montana}{1995}]%
         {Montana:stgp}
 \bibfield{author}{\bibinfo{person}{David~J Montana}.}
@@ -109,6 +97,24 @@
 \newblock \bibinfo{journal}{{\em Evolutionary Computation\/}}
   \bibinfo{volume}{3}, \bibinfo{number}{2} (\bibinfo{year}{1995}),
   \bibinfo{pages}{199--230}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Pedregosa, Varoquaux, Gramfort, Michel,
+  Thirion, Grisel, Blondel, Prettenhofer, Weiss, Dubourg, Vanderplas, Passos,
+  Cournapeau, Brucher, Perrot, and Duchesnay}{Pedregosa et~al\mbox{.}}{2011}]%
+        {Pedregosa:sickit}
+\bibfield{author}{\bibinfo{person}{F. Pedregosa}, \bibinfo{person}{G.
+  Varoquaux}, \bibinfo{person}{A. Gramfort}, \bibinfo{person}{V. Michel},
+  \bibinfo{person}{B. Thirion}, \bibinfo{person}{O. Grisel},
+  \bibinfo{person}{M. Blondel}, \bibinfo{person}{P. Prettenhofer},
+  \bibinfo{person}{R. Weiss}, \bibinfo{person}{V. Dubourg}, \bibinfo{person}{J.
+  Vanderplas}, \bibinfo{person}{A. Passos}, \bibinfo{person}{D. Cournapeau},
+  \bibinfo{person}{M. Brucher}, \bibinfo{person}{M. Perrot}, {and}
+  \bibinfo{person}{E Duchesnay}.} \bibinfo{year}{2011}\natexlab{}.
+\newblock \showarticletitle{Scikit-learn: Machine Learning in Python}.
+\newblock \bibinfo{journal}{{\em Journal of Machine Learning Research\/}}
+  \bibinfo{volume}{12} (\bibinfo{year}{2011}), \bibinfo{pages}{2825--2830}.
 \newblock
 
 
