@@ -1,0 +1,40 @@
+%Content to put into poster
+
+\section{Further Analysis}
+To give further insight into the resulting models from the compared IML methods, a comparison is given on the hill-valley dataset. The hill-valley dataset is considered the most challenging as the black-box models had lowest average test accuracy on this dataset. We can see that the proposed method\textquotesingle s resulting tree and the Bayesian rule list are by far the simplest interpretable models, both condense the 200 layer neural-network into small human readable form.
+
+Looking further the Bayesian rule list just predicts 1 class so is considered overly simplistic. Looking into our evolved tree we can see its splitting points make sense when considering the hill-valley dataset, which "when plotted in order (from 1 through 100) as the Y coordinate, the points will create either a Hill (a `bump' in the terrain) or a Valley (a `dip' in the terrain)" [13]. We can see the tree is checking the first point, and comparing to the point at 30\% (i.e. the 30th feature), or the point at 70\%, where the tree is trying to distinguish between classes by finding the common points for the hills/valleys and checking if these are high or low relative to the training data (e.g. a high point at the start, a low point at 30\%, then a high point at 57\% indicates a valley based on this tree).
+
+Below are the datasets that were most difficult for our method to reconstruct predictions for:
+\begin{itemize}
+\item The Autonuniv-Au7-500 and GesturePhase datasets have 5 classes. As the number of classes increases so does the complexity for tree-based methods. Here the push for smaller trees may need to be relaxed in cases where datasets contain a high number of classes.
+\item Monks-Problems-2 is entirely categorical features. In the proposed method, a categorical node has a branch for each feature -- this potentially overfits to the training data. Combining categorical features into a single branch should be considered for future work.
+\item For eeg-eye-state, the data is sequential/time-series. The proposed method is not optimised/designed for such datasets, so this explains the lower performance.
+\end{itemize}
+\section{CONCLUSIONS AND FUTURE WORK}
+In this work, a novel model (agnostic) extraction method for XAI was proposed. Multi-objective GP is used to learn a simple and interpretable representation of a complex black-box model, which is often able to effectively reproduce the black-box\textquotesingle s predictions. This new method was compared to existing approaches for model extraction, and was found to offer drastically simpler models, with statistically equivalent test accuracy. To our best knowledge, this is the first utilisation of multi-objective optimisation in explainable AI. We also believe this is the first application of GP for model extraction, and shows a promising direction for future developments.
+
+In future work we would like to focus on three main areas. Firstly, can recreation ability be improved without sacrificing simplicity? Secondly, can we find a more suitable measure of complexity to describe human interpretability?  And finally, is it possible to guide the evolution of the models based on human feedback?
+
+\subsubsection{Datasets}
+A broad range of 30 datasets from the OpenML repository \cite{Van:openml} were used for comparison. These were the 20 most run binary datasets, and 10 most run multiclass datasets. The datasets were restricted to less than 15000 instances, less than 5 classes, and no missing values. These datasets are from a variety of domains, and have a varying number of features (both categorical and numeric), classes, and instances.
+
+\subsubsection{Representation}
+The evolved trees are decision tree-like, meaning the input is at the root, the output at a leaf, and the internal nodes are splitting points. Traditionally with GP (parse-trees), the inputs are at the leaves (terminals), the output is at the root, and the internal nodes are functional components (functions). To get around this, data is passed in at the leaves but only functions are returned until the root node (only one branch will end up returning values for a given input), and then the functions are executed once we are at the root. For visualisation and use-cases, the two can be treated uniformly. 
+
+Some simple patterns have needlessly complex representations in decision trees with axis-parallel splits. To solve this, the trees can construct features (as mathematical expressions) implicitly and check if those constructed features are greater than or equal to zero. For example: 
+\begin{center}
+Consider the condition if f1 >= f2 then class 1 else class 0. Without constructed features the resulting tree would be complex. With constructed features we can simply use one split as f1-f2>=0.
+\end{center}
+
+Using constructed features is beneficial to XAI because simpler rules are learnt.
+
+
+
+
+\section{Introduction} 
+Understanding the decisions behind Machine Learning (ML) techniques is important for their adoption into new areas where an AI\textquotesingle s decisions have greater consequences. This need for interpretability has created the push for explainable AI (XAI) \cite{Karlo:xai}.
+
+Traditional tree-based methods from XAI suffer from limitations, due to the greedy nature of tree construction. Using Genetic Programming (GP) \cite{Koza:GeneticProgramming} we can evolve trees instead of constructing them in a greedy manner.
+
+There are multiple approaches to XAI, one approach is the interpretable machine learning (IML) method of model extraction \cite{Bastani:modelExtarct}. In this work we propose a new multi-objective GP-based method for model extraction that is applicable to any black-box (arbitrarily complex) classifier.
