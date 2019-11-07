@@ -38,3 +38,6 @@ Understanding the decisions behind Machine Learning (ML) techniques is important
 Traditional tree-based methods from XAI suffer from limitations, due to the greedy nature of tree construction. Using Genetic Programming (GP) \cite{Koza:GeneticProgramming} we can evolve trees instead of constructing them in a greedy manner.
 
 There are multiple approaches to XAI, one approach is the interpretable machine learning (IML) method of model extraction \cite{Bastani:modelExtarct}. In this work we propose a new multi-objective GP-based method for model extraction that is applicable to any black-box (arbitrarily complex) classifier.
+
+
+We propose a novel model agnostic method for explainable AI 
